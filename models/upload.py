@@ -15,7 +15,7 @@ def collect(src, division):
         checkpoint = os.path.join(src, tag, 'weights', 'best.pt')
         if not os.path.exists(checkpoint):
             raise FileNotFoundError(f'no checkpoint for {tag} at {checkpoint}')
-        files[checkpoint] = f'{division}/{tag}.pt'
+        files[checkpoint] = f'checkpoints/{division}/{tag}.pt'
     return files
 
 
