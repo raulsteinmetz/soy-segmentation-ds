@@ -1,0 +1,458 @@
+[
+ {
+  "video": "20221216-GX010015",
+  "date": "20221216",
+  "fold": 0,
+  "seed": 0,
+  "model": "yolov8m-seg",
+  "map50": 0.8265540623925888,
+  "ap50_by_class": {
+   "soy_plant": 0.8265540623925888
+  }
+ },
+ {
+  "video": "20221216-GX010015",
+  "date": "20221216",
+  "fold": 0,
+  "seed": 1,
+  "model": "yolov8m-seg",
+  "map50": 0.8370058716511622,
+  "ap50_by_class": {
+   "soy_plant": 0.8370058716511622
+  }
+ },
+ {
+  "video": "20221216-GX010015",
+  "date": "20221216",
+  "fold": 0,
+  "seed": 2,
+  "model": "yolov8m-seg",
+  "map50": 0.830806570509924,
+  "ap50_by_class": {
+   "soy_plant": 0.830806570509924
+  }
+ },
+ {
+  "video": "20221216-GX010025",
+  "date": "20221216",
+  "fold": 3,
+  "seed": 0,
+  "model": "yolov8m-seg",
+  "map50": 0.6625494518998339,
+  "ap50_by_class": {
+   "caruru_weed": 0.6680367319986299,
+   "grassy_weed": 0.44473070607553367,
+   "soy_plant": 0.8748809176253384
+  }
+ },
+ {
+  "video": "20221216-GX010025",
+  "date": "20221216",
+  "fold": 3,
+  "seed": 1,
+  "model": "yolov8m-seg",
+  "map50": 0.5055497600537381,
+  "ap50_by_class": {
+   "caruru_weed": 0.192558643166859,
+   "grassy_weed": 0.4812865105908584,
+   "soy_plant": 0.8428041264034969
+  }
+ },
+ {
+  "video": "20221216-GX010025",
+  "date": "20221216",
+  "fold": 3,
+  "seed": 2,
+  "model": "yolov8m-seg",
+  "map50": 0.7213063963485787,
+  "ap50_by_class": {
+   "caruru_weed": 0.8480997664970958,
+   "grassy_weed": 0.43542646949396613,
+   "soy_plant": 0.8803929530546744
+  }
+ },
+ {
+  "video": "20221221-GX010104",
+  "date": "20221221",
+  "fold": 1,
+  "seed": 0,
+  "model": "yolov8m-seg",
+  "map50": 0.6330622331551862,
+  "ap50_by_class": {
+   "grassy_weed": 0.3430977648791476,
+   "soy_plant": 0.9230267014312247
+  }
+ },
+ {
+  "video": "20221221-GX010104",
+  "date": "20221221",
+  "fold": 1,
+  "seed": 1,
+  "model": "yolov8m-seg",
+  "map50": 0.5096700941564737,
+  "ap50_by_class": {
+   "grassy_weed": 0.1134789617486339,
+   "soy_plant": 0.9058612265643134
+  }
+ },
+ {
+  "video": "20221221-GX010104",
+  "date": "20221221",
+  "fold": 1,
+  "seed": 2,
+  "model": "yolov8m-seg",
+  "map50": 0.5013887102897443,
+  "ap50_by_class": {
+   "grassy_weed": 0.09446082362235828,
+   "soy_plant": 0.9083165969571304
+  }
+ },
+ {
+  "video": "20221221-GX010110",
+  "date": "20221221",
+  "fold": 4,
+  "seed": 0,
+  "model": "yolov8m-seg",
+  "map50": 0.7088443989669274,
+  "ap50_by_class": {
+   "caruru_weed": 0.6510882352941176,
+   "grassy_weed": 0.5763973751425637,
+   "soy_plant": 0.899047586464101
+  }
+ },
+ {
+  "video": "20221221-GX010110",
+  "date": "20221221",
+  "fold": 4,
+  "seed": 1,
+  "model": "yolov8m-seg",
+  "map50": 0.6732660763164482,
+  "ap50_by_class": {
+   "caruru_weed": 0.676375554270291,
+   "grassy_weed": 0.4472949070073916,
+   "soy_plant": 0.8961277676716621
+  }
+ },
+ {
+  "video": "20221221-GX010110",
+  "date": "20221221",
+  "fold": 4,
+  "seed": 2,
+  "model": "yolov8m-seg",
+  "map50": 0.6338581048330121,
+  "ap50_by_class": {
+   "caruru_weed": 0.48889561939561943,
+   "grassy_weed": 0.5111745038133955,
+   "soy_plant": 0.9015041912900214
+  }
+ },
+ {
+  "video": "20221227-GX010163",
+  "date": "20221227",
+  "fold": 2,
+  "seed": 0,
+  "model": "yolov8m-seg",
+  "map50": 0.4522440054963331,
+  "ap50_by_class": {
+   "grassy_weed": 0.0,
+   "soy_plant": 0.9044880109926662
+  }
+ },
+ {
+  "video": "20221227-GX010163",
+  "date": "20221227",
+  "fold": 2,
+  "seed": 1,
+  "model": "yolov8m-seg",
+  "map50": 0.4449005622936935,
+  "ap50_by_class": {
+   "grassy_weed": 0.0,
+   "soy_plant": 0.889801124587387
+  }
+ },
+ {
+  "video": "20221227-GX010163",
+  "date": "20221227",
+  "fold": 2,
+  "seed": 2,
+  "model": "yolov8m-seg",
+  "map50": 0.45169565694269387,
+  "ap50_by_class": {
+   "grassy_weed": 0.0,
+   "soy_plant": 0.9033913138853877
+  }
+ },
+ {
+  "video": "20221227-GX010170",
+  "date": "20221227",
+  "fold": 5,
+  "seed": 0,
+  "model": "yolov8m-seg",
+  "map50": 0.6236723737041502,
+  "ap50_by_class": {
+   "caruru_weed": 0.6461412524124167,
+   "grassy_weed": 0.34213106416275435,
+   "soy_plant": 0.8827448045372795
+  }
+ },
+ {
+  "video": "20221227-GX010170",
+  "date": "20221227",
+  "fold": 5,
+  "seed": 1,
+  "model": "yolov8m-seg",
+  "map50": 0.6328038394756884,
+  "ap50_by_class": {
+   "caruru_weed": 0.5991169719574689,
+   "grassy_weed": 0.4269684615384616,
+   "soy_plant": 0.8723260849311346
+  }
+ },
+ {
+  "video": "20221227-GX010170",
+  "date": "20221227",
+  "fold": 5,
+  "seed": 2,
+  "model": "yolov8m-seg",
+  "map50": 0.6199067709876102,
+  "ap50_by_class": {
+   "caruru_weed": 0.5670241831647646,
+   "grassy_weed": 0.4327659118653081,
+   "soy_plant": 0.859930217932758
+  }
+ },
+ {
+  "video": "20230103-GX010189",
+  "date": "20230103",
+  "fold": 3,
+  "seed": 0,
+  "model": "yolov8m-seg",
+  "map50": 0.44466597414970516,
+  "ap50_by_class": {
+   "caruru_weed": 0.0057183908045976995,
+   "grassy_weed": 0.47209349210536233,
+   "soy_plant": 0.8561860395391555
+  }
+ },
+ {
+  "video": "20230103-GX010189",
+  "date": "20230103",
+  "fold": 3,
+  "seed": 1,
+  "model": "yolov8m-seg",
+  "map50": 0.3397176985337036,
+  "ap50_by_class": {
+   "caruru_weed": 0.0,
+   "grassy_weed": 0.16417938099389712,
+   "soy_plant": 0.8549737146072136
+  }
+ },
+ {
+  "video": "20230103-GX010189",
+  "date": "20230103",
+  "fold": 3,
+  "seed": 2,
+  "model": "yolov8m-seg",
+  "map50": 0.374774958739651,
+  "ap50_by_class": {
+   "caruru_weed": 0.0,
+   "grassy_weed": 0.22541493608937826,
+   "soy_plant": 0.8989099401295747
+  }
+ },
+ {
+  "video": "20230103-GX010195",
+  "date": "20230103",
+  "fold": 0,
+  "seed": 0,
+  "model": "yolov8m-seg",
+  "map50": 0.7397281768728439,
+  "ap50_by_class": {
+   "caruru_weed": 0.6959196247540116,
+   "grassy_weed": 0.7344811226751131,
+   "soy_plant": 0.7887837831894071
+  }
+ },
+ {
+  "video": "20230103-GX010195",
+  "date": "20230103",
+  "fold": 0,
+  "seed": 1,
+  "model": "yolov8m-seg",
+  "map50": 0.7262063434976183,
+  "ap50_by_class": {
+   "caruru_weed": 0.5512034284994424,
+   "grassy_weed": 0.8358744459075793,
+   "soy_plant": 0.791541156085833
+  }
+ },
+ {
+  "video": "20230103-GX010195",
+  "date": "20230103",
+  "fold": 0,
+  "seed": 2,
+  "model": "yolov8m-seg",
+  "map50": 0.7445698609132748,
+  "ap50_by_class": {
+   "caruru_weed": 0.6073706748288494,
+   "grassy_weed": 0.8382462287730954,
+   "soy_plant": 0.7880926791378798
+  }
+ },
+ {
+  "video": "20230110-GX010220",
+  "date": "20230110",
+  "fold": 4,
+  "seed": 0,
+  "model": "yolov8m-seg",
+  "map50": 0.4988031236358276,
+  "ap50_by_class": {
+   "caruru_weed": 0.3529753602420189,
+   "grassy_weed": 0.24806081356920018,
+   "soy_plant": 0.8953731970962638
+  }
+ },
+ {
+  "video": "20230110-GX010220",
+  "date": "20230110",
+  "fold": 4,
+  "seed": 1,
+  "model": "yolov8m-seg",
+  "map50": 0.6090021362287459,
+  "ap50_by_class": {
+   "caruru_weed": 0.6012387562406841,
+   "grassy_weed": 0.3294357462356333,
+   "soy_plant": 0.8963319062099201
+  }
+ },
+ {
+  "video": "20230110-GX010220",
+  "date": "20230110",
+  "fold": 4,
+  "seed": 2,
+  "model": "yolov8m-seg",
+  "map50": 0.6436432616671742,
+  "ap50_by_class": {
+   "caruru_weed": 0.6254776578291525,
+   "grassy_weed": 0.4034894205002598,
+   "soy_plant": 0.9019627066721102
+  }
+ },
+ {
+  "video": "20230110-GX010226",
+  "date": "20230110",
+  "fold": 1,
+  "seed": 0,
+  "model": "yolov8m-seg",
+  "map50": 0.5920795195210187,
+  "ap50_by_class": {
+   "caruru_weed": 0.286524324686036,
+   "grassy_weed": 0.7387227308093981,
+   "soy_plant": 0.7509915030676221
+  }
+ },
+ {
+  "video": "20230110-GX010226",
+  "date": "20230110",
+  "fold": 1,
+  "seed": 1,
+  "model": "yolov8m-seg",
+  "map50": 0.5544782697192373,
+  "ap50_by_class": {
+   "caruru_weed": 0.28439982432666383,
+   "grassy_weed": 0.6390871189736888,
+   "soy_plant": 0.7399478658573596
+  }
+ },
+ {
+  "video": "20230110-GX010226",
+  "date": "20230110",
+  "fold": 1,
+  "seed": 2,
+  "model": "yolov8m-seg",
+  "map50": 0.5660525101164686,
+  "ap50_by_class": {
+   "caruru_weed": 0.29301910797273767,
+   "grassy_weed": 0.6654159708169193,
+   "soy_plant": 0.7397224515597489
+  }
+ },
+ {
+  "video": "20230114-GX010233",
+  "date": "20230114",
+  "fold": 5,
+  "seed": 0,
+  "model": "yolov8m-seg",
+  "map50": 0.5761548411071814,
+  "ap50_by_class": {
+   "caruru_weed": 0.37479069814168225,
+   "grassy_weed": 0.5367814981790192,
+   "soy_plant": 0.8168923270008426
+  }
+ },
+ {
+  "video": "20230114-GX010233",
+  "date": "20230114",
+  "fold": 5,
+  "seed": 1,
+  "model": "yolov8m-seg",
+  "map50": 0.6322528196698464,
+  "ap50_by_class": {
+   "caruru_weed": 0.4383389577383309,
+   "grassy_weed": 0.6219798671396091,
+   "soy_plant": 0.8364396341315989
+  }
+ },
+ {
+  "video": "20230114-GX010233",
+  "date": "20230114",
+  "fold": 5,
+  "seed": 2,
+  "model": "yolov8m-seg",
+  "map50": 0.5939827911158809,
+  "ap50_by_class": {
+   "caruru_weed": 0.32372817675775645,
+   "grassy_weed": 0.6286427225447304,
+   "soy_plant": 0.829577474045156
+  }
+ },
+ {
+  "video": "20230114-GX010238",
+  "date": "20230114",
+  "fold": 2,
+  "seed": 0,
+  "model": "yolov8m-seg",
+  "map50": 0.6206630709415165,
+  "ap50_by_class": {
+   "caruru_weed": 0.5316351571725844,
+   "grassy_weed": 0.6820276889198587,
+   "soy_plant": 0.6483263667321066
+  }
+ },
+ {
+  "video": "20230114-GX010238",
+  "date": "20230114",
+  "fold": 2,
+  "seed": 1,
+  "model": "yolov8m-seg",
+  "map50": 0.6226057796600685,
+  "ap50_by_class": {
+   "caruru_weed": 0.5404768502242787,
+   "grassy_weed": 0.7211130172260698,
+   "soy_plant": 0.6062274715298567
+  }
+ },
+ {
+  "video": "20230114-GX010238",
+  "date": "20230114",
+  "fold": 2,
+  "seed": 2,
+  "model": "yolov8m-seg",
+  "map50": 0.6024270206465173,
+  "ap50_by_class": {
+   "caruru_weed": 0.5118567338644923,
+   "grassy_weed": 0.6595368942847417,
+   "soy_plant": 0.6358874337903176
+  }
+ }
+]
