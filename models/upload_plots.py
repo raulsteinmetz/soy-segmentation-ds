@@ -23,10 +23,10 @@ def main():
     count = sum(len(files) for _, _, files in os.walk(args.src))
     print(f'uploading {count} plots ({total / 1e9:.2f} GB) to {args.repo}', flush=True)
 
-    HfApi().upload_folder(folder_path=args.src, path_in_repo=f'plots/{args.division}',
+    HfApi().upload_folder(folder_path=args.src, path_in_repo=args.division,
                           repo_id=args.repo, repo_type='model',
                           allow_patterns=['*.png', '*.jpg'], commit_message='.')
-    print(f'uploaded {count} plots to plots/{args.division}/')
+    print(f'uploaded {count} plots to {args.division}/')
 
 
 if __name__ == '__main__':

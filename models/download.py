@@ -16,7 +16,7 @@ def build_patterns(division, model):
     '''Build the patterns that select the requested checkpoints on the Hub.'''
     divisions = DIVISIONS if division == 'all' else (division,)
     models = MODELS if model == 'all' else (model,)
-    return [f'checkpoints/{d}/{m}_*.pt' for d in divisions for m in models]
+    return [f'{d}/{m}_*/best.pt' for d in divisions for m in models]
 
 
 def main():
