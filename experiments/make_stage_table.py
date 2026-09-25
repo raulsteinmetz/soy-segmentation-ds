@@ -3,8 +3,6 @@
 '''
 
 import os
-import re
-import csv
 import glob
 import json
 import argparse

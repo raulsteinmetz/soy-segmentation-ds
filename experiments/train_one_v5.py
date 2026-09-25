@@ -3,11 +3,9 @@
 '''
 
 import os
-import csv
 import sys
 import json
 import argparse
-import statistics
 import subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -62,24 +60,6 @@ def reshape(rows):
     return packed
 
 
-def converged_stats(csv_path, tail):
-    '''Summarise the final validation epochs without taking the best epoch.'''
-    rows = list(csv.reader(open(csv_path)))
-    header = [c.strip() for c in rows[0]]
-    epochs = [r for r in rows[1:] if len(r) == len(header)]
-    stats = {}
-    for position, column in enumerate(header):
-        if not column.startswith('metrics/'):
-            continue
-        values = [float(r[position]) for r in epochs][-tail:]
-        stats[column] = {
-            'mean': statistics.mean(values),
-            'sd': statistics.pstdev(values),
-            'n': len(values),
-        }
-    return stats
-
-
 def main():
     '''Train one cell with the vendored YOLOv5 repo and write metrics.json.'''
     parser = argparse.ArgumentParser()
@@ -90,8 +70,8 @@ def main():
     parser.add_argument('--out', default=os.path.join(ROOT, 'runs'))
     parser.add_argument('--repo', default=os.path.join(ROOT, 'yolov5'))
     parser.add_argument('--weights', default=os.path.join(ROOT, 'weights'))
+    parser.add_argument('--checkpoints', default=os.path.join(ROOT, 'models', 'grouped'))
     parser.add_argument('--epochs', type=int, default=200)
-    parser.add_argument('--tail', type=int, default=30)
     parser.add_argument('--reeval', action='store_true')
     args = parser.parse_args()
 
@@ -112,7 +92,8 @@ def main():
              '--project', args.out, '--name', tag, '--exist-ok',
              '--workers', '8', '--device', '0'], args.repo, False)
 
-    best = os.path.join(run_dir, 'weights', 'best.pt')
+    best = (os.path.join(args.checkpoints, tag, 'best.pt') if args.reeval
+            else os.path.join(run_dir, 'weights', 'best.pt'))
 
     def evaluate(task):
         '''Evaluate the selected checkpoint on one split.'''
@@ -130,8 +111,8 @@ def main():
         'names': CLASS_NAMES,
         'test': evaluate('test'),
         'val_at_best': evaluate('val'),
-        'val_converged': converged_stats(os.path.join(run_dir, 'results.csv'), args.tail),
     }
+    os.makedirs(run_dir, exist_ok=True)
     with open(target, 'w') as handle:
         json.dump(result, handle, indent=1)
     print(f'[done] {tag} test seg mAP50={result["test"]["seg"]["map50"]:.4f}')

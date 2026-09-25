@@ -4,8 +4,10 @@ __pycache__/
 .venv/
 *.egg-info/
 
-# paper source, kept local
+# paper source and coding rules, kept local
 paper/
+*.zip
+docs/how-to-code.md
 
 # trained checkpoints, published to https://huggingface.co/rsteinmetz/growing-soy
 *.pt
@@ -19,5 +21,4 @@ weights/
 splits/
 runs/
 runs_original/
-figures/
 logs/

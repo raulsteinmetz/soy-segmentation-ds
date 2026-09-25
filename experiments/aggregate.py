@@ -81,21 +81,6 @@ def report_seed_spread(cells, part):
     print(f'  median={statistics.median(spreads):.4f} max={max(spreads):.4f} cells={len(spreads)}')
 
 
-def report_selection_premium(cells, part):
-    '''Print how far the selected checkpoint exceeds the mean of the final validation epochs.'''
-    suffix = 'M' if part == 'seg' else 'B'
-    keys = [f'metrics/mAP50({suffix})', f'metrics/mAP_0.5({suffix})']
-    premiums = collections.defaultdict(list)
-    for cell in cells:
-        converged = cell['val_converged']
-        key = next(k for k in keys if k in converged)
-        premiums[cell['model']].append(cell['val_at_best'][part]['map50'] - converged[key]['mean'])
-    print(f'\n=== selection premium: val at best minus converged val mean ({part} mAP-50) ===')
-    for model in sorted(premiums):
-        mean, sd = mean_sd(premiums[model])
-        print(f'  {model:14} +{mean:.3f} +- {sd:.3f}  (n={len(premiums[model])})')
-
-
 def main():
     '''Print every cross-validation summary table for one metric family.'''
     parser = argparse.ArgumentParser()
@@ -108,7 +93,6 @@ def main():
     report_overall(cells, args.part)
     report_per_fold(cells, args.part)
     report_seed_spread(cells, args.part)
-    report_selection_premium(cells, args.part)
 
 
 if __name__ == '__main__':

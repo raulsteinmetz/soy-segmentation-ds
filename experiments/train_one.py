@@ -3,11 +3,8 @@
 '''
 
 import os
-import csv
-import sys
 import json
 import argparse
-import statistics
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -34,22 +31,6 @@ def pack_metrics(metrics):
     return packed
 
 
-def converged_stats(csv_path, tail):
-    '''Summarise the final validation epochs without taking the best epoch.'''
-    rows = list(csv.DictReader(open(csv_path)))
-    stats = {}
-    for column in rows[0]:
-        if not column.startswith('metrics/'):
-            continue
-        values = [float(row[column]) for row in rows][-tail:]
-        stats[column] = {
-            'mean': statistics.mean(values),
-            'sd': statistics.pstdev(values),
-            'n': len(values),
-        }
-    return stats
-
-
 def main():
     '''Train one cell, evaluate it once on the held-out test split and write metrics.json.'''
     parser = argparse.ArgumentParser()
@@ -58,8 +39,8 @@ def main():
     parser.add_argument('--seed', type=int, required=True)
     parser.add_argument('--cv', default=os.path.join(ROOT, 'splits', 'cv'))
     parser.add_argument('--out', default=os.path.join(ROOT, 'runs'))
+    parser.add_argument('--checkpoints', default=os.path.join(ROOT, 'models', 'grouped'))
     parser.add_argument('--epochs', type=int, default=200)
-    parser.add_argument('--tail', type=int, default=30)
     parser.add_argument('--reeval', action='store_true')
     args = parser.parse_args()
 
@@ -73,7 +54,7 @@ def main():
     from ultralytics import YOLO
 
     if args.reeval:
-        model = YOLO(os.path.join(args.out, tag, 'weights', 'best.pt'))
+        model = YOLO(os.path.join(args.checkpoints, tag, 'best.pt'))
     else:
         model = YOLO(f'{args.model}.pt')
         model.train(
@@ -94,8 +75,8 @@ def main():
                                        iou=EVAL_IOU, half=EVAL_HALF)),
         'val_at_best': pack_metrics(model.val(data=data, split='val', plots=False,
                                               iou=EVAL_IOU, half=EVAL_HALF)),
-        'val_converged': converged_stats(os.path.join(args.out, tag, 'results.csv'), args.tail),
     }
+    os.makedirs(os.path.dirname(target), exist_ok=True)
     with open(target, 'w') as handle:
         json.dump(result, handle, indent=1)
     print(f'[done] {tag} test seg mAP50={result["test"]["seg"]["map50"]:.4f}')
